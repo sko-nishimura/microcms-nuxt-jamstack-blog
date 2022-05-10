@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/g4u_r3fb9", (function(a,b){return {data:[{id:"g4u_r3fb9",createdAt:a,updatedAt:b,publishedAt:a,revisedAt:b,title:"記事その４",contents:"\u003Cp\u003Eテストテストテストテストテストテスト\u003Cbr\u003Eテストテストテストテストテストテスト\u003C\u002Fp\u003E"}],fetch:{},mutations:void 0}}("2022-05-10T06:49:02.772Z","2022-05-10T07:05:09.083Z")));
