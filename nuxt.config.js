@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'microcms-nuxt-jamstack-blog',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'jp'
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,6 +21,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+		'@/assets/css/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -32,11 +33,26 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+		[
+      '@nuxtjs/google-fonts',
+      {
+				families: {
+					'Noto Sans JP': true
+				},
+      }
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: [
+      '@/assets/scss/_setting.scss',
+      '@/assets/scss/_base.scss',
+    ]
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

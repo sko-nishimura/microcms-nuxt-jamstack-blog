@@ -1,12 +1,19 @@
 <template>
+	<div class="wrapper">
+	<Header />
   <main class="main">
     <h1 class="title">{{ title }}</h1>
     <p class="publishedAt" v-html="dateSeparate(publishedAt)"></p>
     <div class="post" v-html="contents"></div>
+
   </main>
+	<Footer />
+	</div>
 </template>
 
 <script>
+import Header from '@/components/siteHeader.vue'
+import Footer from '@/components/siteFooter.vue'
 import axios from 'axios'
 
 export default {
@@ -27,6 +34,10 @@ export default {
 			const time = year+'年'+month+'月'+day+'日';
 			return time;
 		}
+	},
+	components: {
+		Header,
+		Footer
 	}
 
 }

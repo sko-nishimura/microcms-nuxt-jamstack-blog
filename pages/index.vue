@@ -1,15 +1,25 @@
 <template>
-  <ul>
-    <li v-for="content in contents" :key="content.id">
-      <nuxt-link :to="`/${content.id}`">
-        {{ content.title }}
-      </nuxt-link>
-    </li>
-  </ul>
+	<div class="wrapper">
+		<Header />
+
+		<main class="main">
+		<ul>
+			<li v-for="content in contents" :key="content.id">
+				<nuxt-link :to="`/${content.id}`">
+					{{ content.title }}
+				</nuxt-link>
+			</li>
+		</ul>
+		</main>
+
+		<Footer />
+	</div>
 </template>
 
 <script>
 import axios from 'axios'
+import Header from '@/components/siteHeader.vue'
+import Footer from '@/components/siteFooter.vue'
 export default {
   async asyncData() {
     const { data } = await axios.get(
@@ -19,6 +29,10 @@ export default {
       }
     )
     return data
-  }
+  },
+	components: {
+		Header,
+		Footer
+	}
 }
 </script>

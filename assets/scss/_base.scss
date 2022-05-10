@@ -1,0 +1,188 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:normal;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+*{
+	box-sizing: border-box;
+	&::before,&::after{
+		box-sizing: border-box;
+	}
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+img,video{
+	max-width: 100%;
+	height: auto;
+}
+
+sup{
+	vertical-align: super;
+	font-size: .75em;
+}
+
+input,
+select,
+textarea,
+button{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+	color: inherit;
+  font-family: inherit;
+}
+input::-ms-expand,
+select::-ms-expand,
+textarea::-ms-expand,
+button::-ms-expand{
+  display: none;
+}
+button{
+	display: block;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select{
+	width: 100%;
+	border: 1px solid #ccc;
+	background: none;
+}
+
+html{
+	font-size: p2v(28);
+	@media screen and (min-width: $breakpoint){
+		font-size: min(#{(16 / 1400 * 100vw)},16px);
+	}
+	@media screen and (min-width: 1400px){
+		font-size: 16px;
+	}	
+}
+
+body{
+	color: #333;
+	font-family: 'Noto Sans JP', "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+  line-height: 1.75;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	font-size: rem(14);
+	letter-spacing: .05em;
+	@media screen and (min-width: $breakpoint){
+		font-size: rem(16);
+	}
+  &.is-ie{
+    font-family: 'Noto Sans JP', "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+	}
+}
