@@ -1,4 +1,10 @@
 .main{
 	display: block;
-	padding: rem(100) 0;
+	padding: em(100) 0;
+}
+
+.inner{
+	width: 92%;
+	max-width: 1000px;
+	margin: 0 auto;
 }

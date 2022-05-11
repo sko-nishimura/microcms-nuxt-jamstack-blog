@@ -1,12 +1,19 @@
 <template>
 <header>
 	<div class="siteName">Site Name</div>
+	<div class="headerNav">
+		<globalNav />
+	</div>
 </header>
 </template>
 
 
 <script>
+import globalNav from '@/components/globalNav.vue'
 export default {
+	components: {
+		globalNav
+	}
 
 }
 </script>
@@ -14,12 +21,13 @@ export default {
 <style lang="scss" scoped>
 	header{
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		height: rem(100);
-		padding: 0 4rem;
+		padding: 0 4%;
 		border-bottom: 1px solid #ccc;
 		.siteName{
-			font-size: rem(40);
+			font-size: 2em;
 		}
 	}
 </style>
