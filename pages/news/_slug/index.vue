@@ -2,9 +2,18 @@
 	<div class="wrapper">
 	<Header />
   <main class="main">
-    <h1 class="title">{{ title }}</h1>
-    <p class="publishedAt" v-html="dateSeparate(publishedAt)"></p>
-    <div class="post" v-html="contents"></div>
+		<div class="inner newsContents">
+
+			<h1 class="title">{{ title }}</h1>
+			<p class="publishedAt" v-html="dateSeparate(publishedAt)"></p>
+			<div class="postContent" v-html="contents"></div>
+
+			<div class="fieldBlock">
+				<div class="fieldBlock__image" v-html="field.fieldtext"></div>
+				<div class="fieldBlock__image"><img v-bind:src="field.fieldimg.url" alt=""></div>
+			</div>
+
+		</div>
 
   </main>
 	<Footer />
@@ -42,3 +51,23 @@ export default {
 
 }
 </script>
+
+<style lang="scss">
+.newsContents{
+	h1{
+		margin-bottom: 1em;
+		font-size: 2em;
+	}
+
+	.postContent{
+		margin-top: 2em;
+	}
+}
+
+.fieldBlock{
+	display: flex;
+	gap: 5%;
+	margin-top: 3em;
+}
+
+</style>
