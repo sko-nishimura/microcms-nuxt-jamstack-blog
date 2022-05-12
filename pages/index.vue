@@ -3,16 +3,37 @@
 		<Header />
 
 		<main class="main">
-			<div class="inner">
-				<ul class="newsList">
-					<li v-for="content in contents" :key="content.id">
-						<nuxt-link :to="`/${content.id}`">
-							<p class="publishedAt" v-html="dateSeparate(content.publishedAt)"></p>
-							<h2 class="newsTitle">{{ content.title }}</h2>
-						</nuxt-link>
-					</li>
-				</ul>
-			</div>
+			<section class="section">
+				<div class="inner">
+					<h2 class="is-text-align-center">このサイトについて</h2>
+					<p>このサイトはNuxt.jsのテストのためのでもサイトです。<br>内容については正規のものではありません。</p>
+				</div>
+			</section>
+			
+			<section class="section">
+				<div class="inner">
+					<h2 class="is-text-align-center">おしらせ</h2>
+					
+					<ul class="newsList">
+						<li v-for="content in contents" :key="content.id">
+							<nuxt-link :to="`/news/${content.id}`">
+								<p class="publishedAt" v-html="dateSeparate(content.publishedAt)"></p>
+								<h3 class="newsTitle">{{ content.title }}</h3>
+							</nuxt-link>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="inner">
+					<h2 class="is-text-align-center">お問い合わせ</h2>
+					<div class="btnWrap">
+						<div class="btn"><a href="" class="btn__link">お問い合わせはこちら</a></div>						
+					</div>
+				</div>
+			</section>
+
 		</main>
 
 		<Footer />

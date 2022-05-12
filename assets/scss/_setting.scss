@@ -22,3 +22,35 @@
 $breakpoint: 768px;
 
 $mainColor: #DDEEFF;
+
+//矢印アイコン
+@mixin iconR {//右
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: 'Material Icons'; 
+	content: "keyboard_arrow_right"
+}
+@mixin iconL {//左
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: 'Material Icons'; 
+	content: "keyboard_arrow_left"
+}
+@mixin iconU {//上
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: 'Material Icons'; 
+	content: "keyboard_arrow_up"
+}
+@mixin iconD {//下
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: 'Material Icons'; 
+	content: "keyboard_arrow_down"
+}
+@mixin iconD-circle {//下
+	font-size: 1.5em;
+	font-weight: normal;
+	font-family: 'Material Icons'; 
+	content: "arrow_drop_down_circle"
+}

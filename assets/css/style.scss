@@ -1,10 +1,65 @@
+@import "https://fonts.googleapis.com/css2?family=Material+Icons";
+
 .main{
 	display: block;
 	padding: em(100) 0;
-}
 
-.inner{
-	width: 92%;
-	max-width: 1000px;
-	margin: 0 auto;
+	.section{
+		padding: 3em 0;
+	}
+	
+	.inner{
+		width: 92%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	.is-text-align-left{
+		text-align: left;
+	}
+	.is-text-align-right{
+		text-align: right;
+	}
+	.is-text-align-center{
+		text-align: center;
+	}
+
+	h2{
+		margin: 2em 0 1.5em;
+		font-size: 1.8em;
+		&:nth-child(1){
+			margin-top: 0;
+		}
+	}
+
+
+	.btnWrap{
+		display: flex;
+		flex-wrap: wrap;
+		.btn{
+			flex-basis: 88%;
+			max-width: 360px;
+			margin: auto;
+			&__link{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				width: 100%;
+				height: 4em;
+				border-radius: 10px;
+				background-color: $mainColor;
+				font-size: 1rem;
+				text-align: center;
+				&::after{
+					display: block;
+					position: absolute;
+					right: 1em;
+					top: 50%;
+					transform: translateY(-50%);
+					@include iconR;
+				}
+			}
+		}
+	}
 }
