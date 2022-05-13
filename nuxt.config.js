@@ -51,6 +51,7 @@ export default {
     scss: [
       '@/assets/scss/_setting.scss',
       '@/assets/scss/_base.scss',
+      '@/assets/scss/_form.scss',
     ]
   },
 
