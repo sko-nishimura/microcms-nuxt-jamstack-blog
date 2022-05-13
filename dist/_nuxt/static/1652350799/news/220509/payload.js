@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/news/220509", (function(a){return {data:[{id:"220509",createdAt:a,updatedAt:a,publishedAt:a,revisedAt:a,title:"新しい記事",contents:"\u003Cp\u003EURLテスト\u003C\u002Fp\u003E",field:null}],fetch:{},mutations:void 0}}("2022-05-09T05:40:04.376Z")));
