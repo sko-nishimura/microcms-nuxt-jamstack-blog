@@ -8,7 +8,7 @@
 			<p class="publishedAt" v-html="dateSeparate(publishedAt)"></p>
 			<div class="postContent" v-html="contents"></div>
 
-			<div class="fieldBlock">
+			<div class="fieldBlock" v-if="field">
 				<div class="fieldBlock__image" v-html="field.fieldtext"></div>
 				<div class="fieldBlock__image"><img v-bind:src="field.fieldimg.url" alt=""></div>
 			</div>

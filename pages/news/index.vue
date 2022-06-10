@@ -9,8 +9,11 @@
 				<ul class="newsList">
 					<li v-for="content in contents" :key="content.id">
 						<nuxt-link :to="`/news/${content.id}`">
-							<p class="publishedAt" v-html="dateSeparate(content.publishedAt)"></p>
-							<h3 class="newsTitle">{{ content.title }}</h3>
+							<div class="newsList__image" v-if="content.thumbnail"><img v-bind:src="content.thumbnail" alt=""></div>
+							<div class="newsList__content">
+								<p class="publishedAt" v-html="dateSeparate(content.publishedAt)"></p>
+								<h3 class="newsTitle">{{ content.title }}</h3>
+							</div>
 						</nuxt-link>
 					</li>
 				</ul>

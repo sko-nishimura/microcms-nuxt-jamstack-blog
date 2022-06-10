@@ -15,7 +15,7 @@
 							<div class="formBlock__label"><label for="name">お名前</label></div>
 							<div class="formBlock__item">
 								<div class="formBlock__input formBlock__input-text">
-									<input type="text" name="name" id="name" placeholder="">
+									<input type="text" name="yourname" id="name" placeholder="">
 								</div>
 							</div>
 							<!-- /.formBlock__item -->
