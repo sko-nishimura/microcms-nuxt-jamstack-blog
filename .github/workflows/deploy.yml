@@ -1,14 +1,29 @@
 name: Deploy
+
 on:
+  push:
+    branches: [ master ]
   repository_dispatch:
+    branches: [ master ]
     types: [update_post]
+
+
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 16.x]
+
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: 16.x
-    - run: npm install
-    - run: npm run build
+        node-version: ${{ matrix.node-version }}
+    - name: yarn install, build
+      run: |
+           npm install
+           npm run build
