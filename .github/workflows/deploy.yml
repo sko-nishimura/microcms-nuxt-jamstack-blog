@@ -1,4 +1,4 @@
-name: Deploy FTP CI
+name: Deploy FTP
 
 on:
   push:
@@ -25,9 +25,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm run export
+      - name: npm install, build
+        run: |
+          npm ci
+          npm run build --if-present
+        env:
+          CI: true
+      
       - name: Deploy FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
