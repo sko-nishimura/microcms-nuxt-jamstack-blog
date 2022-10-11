@@ -2,12 +2,12 @@ name: Deploy FTP CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   repository_dispatch:
-    branches: [ main ]
+    branches: [ master ]
     types: [update_post]
   workflow_dispatch:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
