@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   repository_dispatch:
     branches: [ main ]
+    types: [update_post]
   workflow_dispatch:
     branches: [ main ]
 
